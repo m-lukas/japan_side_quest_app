@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "title": "Japan Side Quest",
+    "version": 1,
+    "updatedAt": "2026-10-17T12:00:00.000Z"
+  },
+  "settings": {
+    "activeSlots": 5,
+    "playerName": "Daniel"
+  },
+  "challenges": [
+    {
+      "id": "vending-machine-wildcard",
+      "title": "Automaten-Wildcard",
+      "description": "Finde einen Automaten mit etwas, das du zuhause niemals erwarten würdest.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "food",
+        "surprise"
+      ],
+      "status": "active",
+      "activatedAt": "2026-11-01T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "station-soundtrack",
+      "title": "Der Bahnhofssoundtrack",
+      "description": "Bleib fünf Minuten an einem Bahnhof stehen. Erfinde danach einen Songtitel für das, was du gehört hast.",
+      "points": 3,
+      "regions": [
+        "honshu",
+        "fukuoka"
+      ],
+      "tags": [
+        "train",
+        "observation"
+      ],
+      "status": "active",
+      "activatedAt": "2026-11-01T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "camera-worthy",
+      "title": "Ein Bild, keine Wiederholung",
+      "description": "Mach ein Foto mit der Einwegkamera von einem Moment, den du niemandem erklären könntest.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "camera",
+        "memory"
+      ],
+      "status": "active",
+      "activatedAt": "2026-11-01T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "ramen-three-words",
+      "title": "Ramen in drei Worten",
+      "description": "Iss irgendwo Ramen und beschreibe Brühe, Nudeln und Raum jeweils mit genau einem Wort.",
+      "points": 3,
+      "regions": [
+        "honshu",
+        "fukuoka"
+      ],
+      "tags": [
+        "food"
+      ],
+      "status": "active",
+      "activatedAt": "2026-11-01T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "tiny-shrine",
+      "title": "Der kleinste Schrein",
+      "description": "Finde einen Schrein, der kleiner ist als ein Parkplatz. Nimm dir dort eine ruhige Minute.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "quiet",
+        "culture"
+      ],
+      "status": "active",
+      "activatedAt": "2026-11-01T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "convenience-trio",
+      "title": "Konbini-Dreikampf",
+      "description": "Stell aus einem Konbini einen Snack, ein Getränk und eine Sache zusammen, deren Zweck du erst nach dem Kauf verstehst.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "food",
+        "surprise"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "local-recommendation",
+      "title": "Der Umweg",
+      "description": "Frag jemanden nach einem Ort in der Nähe, den Reiseführer wahrscheinlich auslassen. Folge der Empfehlung, wenn sie sich gut anfühlt.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "social",
+        "explore"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "okinawa-blue",
+      "title": "Fünf Töne Blau",
+      "description": "Finde fünf unterschiedliche Blautöne zwischen Meer, Himmel und Alltag. Du musst sie nicht fotografieren , nur bemerken.",
+      "points": 3,
+      "regions": [
+        "okinawa"
+      ],
+      "tags": [
+        "nature",
+        "slow"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "fukuoka-yatai",
+      "title": "Tisch am Rand",
+      "description": "Wenn du an einem Yatai vorbeikommst: Setz dich dazu oder bleib stehen und frag nach der einen Sache, die man dort probieren sollte.",
+      "points": 5,
+      "regions": [
+        "fukuoka"
+      ],
+      "tags": [
+        "food",
+        "social"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "mystery-souvenir",
+      "title": "Das Rätsel-Souvenir",
+      "description": "Finde etwas Kleines, das nur in Japan Sinn ergibt. Sag erst zuhause, was es ist.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "shopping",
+        "surprise"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "wrong-turn",
+      "title": "Eine gute falsche Abzweigung",
+      "description": "Nimm bewusst einmal die Straße, die nicht auf dem Weg liegt , maximal 20 Minuten. Kehre um, wenn es sich nicht richtig anfühlt.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "explore"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "night-sign",
+      "title": "Licht in der Nacht",
+      "description": "Finde nach Sonnenuntergang ein Schild, dessen Licht deinen Abend besser macht. Merk dir den Ort.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "night",
+        "observation"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kindness-loop",
+      "title": "Kleine Freundlichkeit",
+      "description": "Tu etwas Unaufgeregtes Freundliches, ohne dafür ein Foto oder eine Geschichte zu brauchen.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "social"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "japanese-word",
+      "title": "Ein neues Wort",
+      "description": "Lern ein japanisches Wort, das du noch nicht kanntest, und benutze es mindestens einmal passend.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "language"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "quiet-view",
+      "title": "Aussicht ohne Eile",
+      "description": "Such dir einen offenen Ort und bleib dort, bis du drei Dinge bemerkst, die du beim ersten Blick übersehen hast.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "nature",
+        "slow"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    }
+  ],
+  "activity": [
+    {
+      "id": "evt_seed_1",
+      "type": "activated",
+      "challengeId": "vending-machine-wildcard",
+      "at": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_2",
+      "type": "activated",
+      "challengeId": "station-soundtrack",
+      "at": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_3",
+      "type": "activated",
+      "challengeId": "camera-worthy",
+      "at": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_ramen-three-words",
+      "type": "activated",
+      "challengeId": "ramen-three-words",
+      "at": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_tiny-shrine",
+      "type": "activated",
+      "challengeId": "tiny-shrine",
+      "at": "2026-11-01T10:00:00.000Z"
+    }
+  ]
+}
