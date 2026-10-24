@@ -109,11 +109,11 @@ function MapView({ data }) {
 }
 function Explanation() {
   return <section className="explanation"><div className="explanation-heading"><Icon name="torii" size={44}/><span className="display-font">Kleine Quests. Große Erinnerungen.</span></div><div className="explanation-grid">
-    <article><span className="step-number">01</span><h2>Fünf Ideen für unterwegs</h2><p>Deine fünf Karten sind Vorschläge, kein Reiseplan. Sie bleiben gespeichert, auch wenn du den Browser schließt oder das Gerät wechselst.</p></article>
-    <article><span className="step-number">02</span><h2>Erledigen oder tauschen</h2><p>Geschafft? Bestätige die Quest und sammle Punkte. Danach füllt eine neue Karte deinen freien Platz. Passt etwas nicht, darfst du es tauschen.</p></article>
-    <article><span className="step-number">03</span><h2>Der Moment entscheidet</h2><p>Schon am richtigen Ort für etwas anderes? Such im Katalog und erledige eine passende Quest direkt. Deine Vorschläge ändern sich dabei nicht, außer du erledigst eine dieser fünf Karten.</p></article>
+    <article><span className="step-number">01</span><h2>Fünf Side Quests für unterwegs</h2><p>Die fünf Quests sind Vorschläge um weitere unvergessliche Momente auf der Reise zu erleben. Sie bleiben gespeichert, auch wenn du den Browser schließt oder das Gerät wechselst. Es kann aber immer nur eine Person gleichzeitig die Webseite benutzen, da die Datenbank sehr einfach ist.</p></article>
+    <article><span className="step-number">02</span><h2>Erledigen oder tauschen</h2><p>Geschafft? Bestätige die Quest und sammle Punkte. Danach füllt eine neue Karte deinen freien Platz. Passt etwas nicht, darfst du es tauschen. Die getauschte Quest geht zurück in den Pool.</p></article>
+    <article><span className="step-number">03</span><h2>Der Moment entscheidet</h2><p>Schon am richtigen Ort für etwas anderes? Such im Katalog und erledige eine passende Quest direkt. Deine Vorschläge ändern sich dabei nicht, außer du erledigst eine der fünf Karten.</p></article>
     <article><span className="step-number">04</span><h2>Erinnerungen sammeln</h2><p>Speichere beim Abschluss freiwillig deinen Standort für die Karte. Die Einwegkamera ist für besondere Fotos, nicht als Pflichtbeweis. Achte auf Regeln vor Ort und frag Menschen vor dem Fotografieren.</p></article>
-  </div><p className="explanation-note">Jede Quest zählt einmal. Getauschte Karten gehen zurück in den Stapel und können später wieder zufällig gezogen werden. Du kannst sie auch über die Suche erledigen. Weniger als fünf Vorschläge gibt es erst, wenn insgesamt weniger als fünf offene Quests übrig sind.</p></section>;
+  </div><p className="explanation-note">Jede Quest zählt einmal. Entscheide selbst wann sie erfüllt ist. Bitte achte auf lokale Regeln und Gesetze. Auch wenn du die 100 Punkte erreicht hast, kannst du noch weitermachen.</p></section>;
 }
 
 function AdminView({ data }) {
