@@ -4,6 +4,7 @@
   color-scheme: light;
   --ink: #292144;
   --muted: #726586;
+  --score-total: #707078;
   --ink-on-gold: #503418;
   --page: #f4effb;
   --surface: #fffdfd;
@@ -42,6 +43,7 @@ html[data-theme='dark'] {
   color-scheme: dark;
   --ink: #f5edff;
   --muted: #baabcd;
+  --score-total: #b4b4bd;
   --page: #171324;
   --surface: #272037;
   --surface-soft: #211a31;
@@ -90,7 +92,7 @@ h3 { font-size: 17px; }
 html[data-theme='dark'] .hero h1 { color: #e8caff; text-shadow: 0 3px 0 #422452; }
 .hero-japanese { font-size: 13px; letter-spacing: .18em; color: var(--muted); }
 .score-panel { display: flex; gap: 8px; align-items: center; min-width: 265px; padding: 18px 24px 18px 13px; border: 1px solid var(--line-strong); border-radius: var(--radius-lg); background: linear-gradient(145deg,var(--surface),var(--surface-soft)); box-shadow: inset 0 2px 0 #ffffff70, var(--shadow-panel); }
-.score-content { flex: 1; }.score-label { font-size: 11px; font-weight: 700; color: var(--muted); }.score-value { font-size: 34px; font-weight: 900; line-height: 1.4; letter-spacing: -.04em; }.score-value span { font-size: 16px; font-weight: 600; color: var(--muted); }.score-content small { font-size: 10px; color: var(--muted); display: block; margin-top: 5px; }
+.score-content { flex: 1; }.score-label { font-size: 11px; font-weight: 700; color: var(--muted); }.score-value { font-size: 34px; font-weight: 900; line-height: 1.4; letter-spacing: -.04em; }.score-value span { font-size: 16px; font-weight: 600; color: var(--muted); }.score-value .score-total { color: var(--score-total); font-size: 14px; font-weight: 500; white-space: nowrap; letter-spacing: normal; }.score-content small { font-size: 10px; color: var(--muted); display: block; margin-top: 5px; }
 .score-track { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; box-shadow: inset 0 1px 2px #00000012; }.score-track i { display: block; height: 100%; min-width: 0; background: linear-gradient(90deg,#a14ed7,#d69fff); border-radius: inherit; transition: width .6s; }
 
 /* Claw-machine capsule: translucent shell, toy inside, seam and reflected light. */

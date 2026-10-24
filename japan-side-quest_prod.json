@@ -1,0 +1,1421 @@
+{
+  "meta": {
+    "title": "Japan Side Quest",
+    "version": 1,
+    "updatedAt": "2026-10-17T12:00:00.000Z"
+  },
+  "settings": {
+    "activeSlots": 5,
+    "playerName": "Daniel"
+  },
+  "challenges": [
+    {
+      "id": "tiny-shrine",
+      "title": "Der kleinste Schrein",
+      "description": "Finde einen Schrein, der kleiner als 5x5m ist. Nimm dir dort eine ruhige Minute.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "ruhig",
+        "tempel",
+        "kultur",
+        "klein"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "okinawa-blue",
+      "title": "Fünf Töne Blau",
+      "description": "Finde fünf unterschiedliche Blautöne zwischen Meer, Himmel und Alltag. Mache ein Foto dass all diese gleichzeitig einfängt.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "bild"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "japanese-word",
+      "title": "Ein neues Wort",
+      "description": "Lern ein japanisches Substantiv, das du noch nicht kanntest und benutze es mindestens einmal passen in einem Gespräch mit Lokals.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sprache",
+        "gespräch"
+      ],
+      "status": "active",
+      "activatedAt": "2026-10-24T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kartenhaus",
+      "title": "Baue das größte Kartenhaus",
+      "description": "Baue ein Kartenhaus mit Spielkarten (die du dabei hast oder findest) mit mindestens 4 Etagen. Wenn du noch höher willst, kein Problem.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "restaurant",
+        "bar"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kombini-mindread",
+      "title": "Kombini Mindread Challenge",
+      "description": "Geht nacheinander/versetzt in den Kombini. Kauft ohne euch vorher abzustimmen das exakt gleiche Produkt. Ihr könnt es zu zweit oder mit noch mehr Personen spielen.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "multiplayer",
+        "spiel",
+        "einkauf"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "dammkarte",
+      "title": "Damn Dam",
+      "description": "Im Jahr 2007 hat das Tourismus-Ministerum in Japan Sammelkarten für Talsperren/Dämme eingeführt, um diese populärer zu machen. Die sogenannten Damu Kādo sind äußerst beliebt und können an fast allen Dämmen im Land erhalten werden. Fahrt zu einer Talsperre und erhaltet jeweils eine Karte.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "wasser",
+        "sammel",
+        "spiel"
+      ],
+      "status": "active",
+      "activatedAt": "2026-10-24T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "signature-dish",
+      "title": "Das Signature Dish",
+      "description": "Esse das Signature Dish der jeweiligen Präfektur. Lasse es dir schmecken.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "gericht",
+        "speiße",
+        "region",
+        "prefecture"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "100-landscapes",
+      "title": "100 Landscapes of Japan",
+      "description": "Japan hat 100 Landschaften von besonderer Schönheit ausgewiesen. Besuche eine davon und genieße die Umgebung. (https://www.timetojapan.com/lists)",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "orte",
+        "places"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "100-waters",
+      "title": "Drinke ein Remarkable Water",
+      "description": "Japan hat 100 besonders gute/bedeutende Quellen ausgewiesen. Besuche eine davon und teste das Wasser. (https://www.timetojapan.com/lists)",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spring",
+        "wasser",
+        "places"
+      ],
+      "status": "active",
+      "activatedAt": "2026-10-24T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "100-sunsets",
+      "title": "100 beste Sonnenuntergänge",
+      "description": "Japan hat 100 Orte mit den schönsten Sonnenuntergängen ausgewiesen. Besuche einen davon und genieße den Sonnenuntergang. (https://www.timetojapan.com/lists)",
+      "points": 6,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sunset",
+        "orte",
+        "places"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "100-soundscapes",
+      "title": "100 Soundscapes",
+      "description": "Japan hat 100 Orte mit besonderer Soundkulisse ausgewiesen. Besuche einen davon und nehme die Klänge auf. (https://www.timetojapan.com/lists)",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "töne",
+        "ton",
+        "orte",
+        "places"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "samuraihaus",
+      "title": "Wohnung eines Samurai",
+      "description": "Japan ist berüchtigt für die Era der Samurais. Besuche ein traditionelles Wohnhaus und lerne wie Samurais die Sicherheit gewährleistet haben",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "historisch",
+        "haus",
+        "kämpfer"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "shinkansen-foto",
+      "title": "Foto eines fahrenden Shinkansen",
+      "description": "Sei schnell! Nehme ein Foto im Profil der Schnautze eines bei voller Geschwindigkeit fahrenden Shinkansen auf. Der Abstand vom Zug sollte nicht mehr als 10-20 Meter betragen (näher macht's spannender). Es reicht wenn einige Zentimeter zu sehen sind.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schnelligkeit",
+        "bild",
+        "zug",
+        "bahnhof"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "mango",
+      "title": "Miyazaki Mango",
+      "description": "Die Taiyō no Tamago ('Egg of the Sun') ist die teuerste Mango der Welt (~40€). Allerdings soll ihr Geschmack auch wirklich extrem gut sein. Falls du es dir leisten willst, probiere sie, ansonsten finde sie in einem Markt.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "essen",
+        "luxus",
+        "obst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "village",
+      "title": "Gasshō-zukuri Haus",
+      "description": "Besuche ein Gassō-zukuri Haus. Diese traditionellen Häuser gibt es eigentlich nur in wenigen Dörfern in den Bergen (sonst Museen) und sie zeichnen sich durch ihre strohbedeckten Dächer aus. Definitiv sehr sehenswert!",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "architektur",
+        "historisch",
+        "dorf"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "unesco",
+      "title": "UNESCO Heritage Site",
+      "description": "Besuche eine UNESCO Heritage Site. Japan hat derzeit 27, verteilt auf alle Hauptinseln und einige Nebeninseln.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "besonders",
+        "orte",
+        "places"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kalligraphie-selbst",
+      "title": "Kalligraphie Selbsterfahrung",
+      "description": "Suche dir einen guten Stift und versuche den Kanji letter 楽 (raku / tano-shii) kalligraphisch darzustellen.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schrift",
+        "malen",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "hochhaus",
+      "title": "Where's Waldo?",
+      "description": "Diese Quest braucht mindestens 2 Personen. Eine Person besucht die Aussichtsplatform eines Hochhauses, während die andere Person/Personen sich unten hinstellen. Ohne vorherige Absprache muss die Person oben, die unten fotografieren.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "multiplayer",
+        "wimmelbild"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "seilbahn",
+      "title": "Eine Seilbahn-Fahrt",
+      "description": "Fahre mit einer Seilbahn und genieße die Aussicht.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "berg",
+        "natur",
+        "transport"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "clam",
+      "title": "Find a Clam",
+      "description": "Finde eine lebende Muschel. Lass sie leben und setze sie ggf. zurück.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "strand",
+        "tier",
+        "meer"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "baseball",
+      "title": "Besuche ein Baseball-Spiel",
+      "description": "Baseball ist in Japan äußerst beliebt. Besuche ein Spiel in einem Stadion und beschreibe die Atmosphäre für dich selbst.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "sport",
+        "live"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "bird-prefecture",
+      "title": "Finde deinen Prefecture-Bird",
+      "description": "Jede Prefäktur hat einen eigenen offiziellen Vogel. Finde den deiner derzeitigen Prefecture.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "tier",
+        "foto",
+        "natur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "gipfel",
+      "title": "Besteige einen Gipfel",
+      "description": "Erreiche den Gipfel eines Berges. Genieße die Aussicht und macht ggf. ein Gruppenfoto.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "mountain",
+        "foto"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "bahnhofssong",
+      "title": "Der Bahnhofssong",
+      "description": "Hört dem Song an einem Bahnsteig zu. Denkt euch dannach einen Namen dafür aus.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "bahnhof",
+        "musik",
+        "kreativ"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "tier-stempel",
+      "title": "Finde einen Tier-Stempel",
+      "description": "In Japan kann man viele Stempel sammeln. Finde einen mit einem Tiermotiv.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sammeln",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "castle",
+      "title": "Castle Time",
+      "description": "Besuche ein historisches, japanisches Castle. Lerne mehr über die Geschichte.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "historisch",
+        "kultur",
+        "burg"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "boot-fahren",
+      "title": "Fahre mit einem Boot",
+      "description": "Entdecke Japan vom Wasser aus.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "wasser",
+        "meer",
+        "transport"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "vending-machine",
+      "title": "Find an Unusual Vending Machine",
+      "description": "Japan ist bekannt für seine Automaten. Finde eine Vending Machine, die eines der folgenden Dinge verkauft: Dental Supplies, Sake, Bananen, Kravatten, Hot Ramen oder Keychains",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "shopping",
+        "besonders",
+        "suchen"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "10-japanese-items",
+      "title": "Spiel: Findet 10 japanische Dinge",
+      "description": "Findet die folgenden typisch-japanischen Dinge. Ihr habt 30 Minuten Zeit. Liste: Vending Machine, Fotoautomat, Bamboo, Torii, Plastik-Essen, Koi-Karpfen, Sushi, Shinkansen (Bild oder Zug), Manga, Lucky Cat (Maneki-Neko)",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "multiplayer",
+        "japan"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "greifarm",
+      "title": "Gewinne bei einem Greifarm",
+      "description": "Spiele an einem Greifarm und gewinne etwas. Behalte es als Souvenir oder verschenke es weiter.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "glück"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "stein-ditschen",
+      "title": "Stein läuft auf Wasser",
+      "description": "Lasst einen Stein mindestens 4 Mal übers Wasser hüpfen. Macht gerne auch einen kleinen Wettbewerb draus.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sport",
+        "wasser",
+        "meer",
+        "wettbewerb"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "mülleimer",
+      "title": "Finde einen Mülleimer in der Öffentlichkeit",
+      "description": "Finde einen Mülleimer in der Öffentlichkeit. Nicht so leicht wie es scheint.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "stadt",
+        "suchen"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "special-sushi",
+      "title": "Besonderes Sushi",
+      "description": "Esse sehr besonderes Sushi dass du noch nicht kennst.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "mahlzeit",
+        "restaurant",
+        "probieren"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "friseur",
+      "title": "Japanischer Friseur",
+      "description": "Besuche einen japanischen Friseur und lasse dir einen Haarschnitt geben.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "ausprobieren",
+        "stadt",
+        "frisur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "special-stift",
+      "title": "Kaufe einen besonderen Stift",
+      "description": "Japan hat eine große Kultur rund ums Schreiben und Stifte. Es gibt sogar ganze Messen in Japan, die sich nur darum drehen. Kaufe dir einen besonderen Stift für Zuhause und probiere ihn aus.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schrift",
+        "zeichnen",
+        "büro"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "martial-arts",
+      "title": "Besuche einen Martial Arts Kampf",
+      "description": "Egal ob Sudo, Karate, Judo oder andere, Japan ist bekannt für Martial Arts. Besuche einen Kampf und beschreibe die Atmosphäre.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sport",
+        "live",
+        "event"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kalligraphie-tempel",
+      "title": "Erhalte ein Goshuin",
+      "description": "Gushuin sind kalligraphische Tempel-Stempel, die eine große spirituelle Bedeutung haben und die man bei Shrines gegen eine Spende erhalten kann. Da es ein spirituelles Artefakt ist, gehe damit bitte sorgsam um.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schrift",
+        "religion",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "crab",
+      "title": "Find a crab",
+      "description": "Finde eine lebende Krabbe in der Natur. Gib ihr einen Namen wenn du willst.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "tier",
+        "natur",
+        "meer"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "find-snow",
+      "title": "Find Snow",
+      "description": "Mache ein Foto von echtem Schnee.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "weiß",
+        "berg"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "unpunctual-shinkansen",
+      "title": "Unpünktlicher Shinkansen",
+      "description": "Finde einen unpünktlichen Shinkansen. Egal ob auf einer Anzeigetafel oder ob es dein Zug ist.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "zug",
+        "bahnhof",
+        "zeit"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "cat-cafe",
+      "title": "Besuche ein Katzencafé",
+      "description": "Katzencafés sind sehr beliebt in Japan. Besuche eines und finde deine Lieblingskatze.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "tier",
+        "restaurant"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "get-naughty",
+      "title": "NSFW",
+      "description": "Japan hat eine interessante gesellschaftliche Beziehung zu Sex. Besuche einen Erotikladen, einfach um's mal gesehen zu haben. Natürlich nur wenn du/ihr wollt.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "shopping"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "pokemon-cards",
+      "title": "Pokemon-Hype-Train",
+      "description": "Öffne ein Pokemon Booster-Pack. Vielleicht wirst du ja reich.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "manga",
+        "anime",
+        "sammeln"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "something-royal",
+      "title": "Finde etwas Royales",
+      "description": "Japan ist weiterhin eine Monarchie. Finde einen royalen Ort und lerne mehr über die Geschichte.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "historisch",
+        "kultur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "postcard-self",
+      "title": "Postkarte an dich selbst",
+      "description": "Journal-Souvenir: Schicke eine Postkarte an dich selbst zu einer Unterkunft später auf der Reise. Alternativ kannst du dir auch eine Postkarte an dich zu dir nach Hause schicken.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "versenden",
+        "schreiben"
+      ],
+      "status": "active",
+      "activatedAt": "2026-10-24T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "german-food",
+      "title": "Esse deutsches Essen",
+      "description": "Finde und esse deutsches Essen in Japan. Wie ist es im Vergleich zu Deutschland?",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "restaurant",
+        "mahlzeit",
+        "kultur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "souvenir-rest-der-reise",
+      "title": "Etwas für die Reise",
+      "description": "Setze die Quest sofort um. Nimm dir irgendetwas kostenloses als Souvenir mit (ohne zu stehlen) und behalte es mindestens bis zum Ende deiner Reise. Achte dabei auf lokale Gesetze. Du kannst die Quest sofort abhaken.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "mitbringsel"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "anime-werbung",
+      "title": "Finde Anime/Manga-Werbung",
+      "description": "Finde eine Anime/Manga-Werbung.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "foto",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "japanische-redewendung",
+      "title": "Lerne eine Redewendung",
+      "description": "Lerne eine japanische Redewendung und verwende sie mindestens einmal passend.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "sprache",
+        "kultur",
+        "memory"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "karaoke",
+      "title": "Singe Karaoke",
+      "description": "Japan ist bekannt für Karaoke. Geht zusammen singen.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "gesang",
+        "gruppe",
+        "kultur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "sake-intoxicated",
+      "title": "Get intoxicated on Sake",
+      "description": "Sei etwas beschwipst von Sake. Trinke natürlich verantwortungsvoll.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "bar",
+        "restaurant",
+        "drink"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "conveyer-belt-sushi",
+      "title": "Conveyer Belt Restaurant",
+      "description": "Lasse dir Sushi mit einem Laufband bringen.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "restaurant",
+        "essen",
+        "kultur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "bestellen-japanisch",
+      "title": "Bestelle Essen auf Japanisch",
+      "description": "Lerne genügend Begriffe um eine einfache Bestellung auf Japanisch zu tätigen.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "restaurant",
+        "café",
+        "bar",
+        "sprache"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "same-shoes",
+      "title": "Finde deine Schuhe",
+      "description": "Egal im Laden oder auf der Straße. Finde die gleichen Schuhe, die du trägst.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "shopping",
+        "suchen"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "inselhopping",
+      "title": "Inselhopping",
+      "description": "Besuche eine kleine Insel die kleiner als eine Prefecture ist.",
+      "points": 5,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schrift",
+        "malen",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "reisnudelturm",
+      "title": "Turm aus Reisnudeln",
+      "description": "Baue einen Turm aus Reisnudeln. Immer nur Hartweizen ist doch langweilig. Weitere Materialien sind erlaubt.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "kreativ",
+        "gruppe",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "dance-in-donki",
+      "title": "Tanze im Don Quijote",
+      "description": "Die Kette Don Quijote ist bekannt für seine Titelmusik. Lasst euch auf die Musik ein und startet einen kurze Tanzsession. Muss natürlich niemand sehen.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "donki",
+        "shopping",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "ghost-train-station",
+      "title": "Die Ghost Station",
+      "description": "Steigt an einem Bahnhof aus, wo niemand außer euch aussteigt.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "bahnhof",
+        "zug",
+        "transport"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "katastrophencenter",
+      "title": "Bereitet euch auf die Katastrophe vor.",
+      "description": "Japan ist durch seine Geographie anfälliger für Naturkatastrophen als andere Länder. Lernt in einem Katastrophenschutz-Zentrum wie ihr euch im Ernstfall verhaltet. Möglich beispielweise in Tokio.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schutz",
+        "stadt",
+        "natur"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kugelautomat",
+      "title": "Glückliche Kugeln",
+      "description": "Bekomme bei einem Kugelautomaten genau das was du willst. Natürlich kannst du es mehrfach versuchen.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "gewinn"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "wolkenfiguren",
+      "title": "Was seht ihr in den Wolken?",
+      "description": "Schaut zusammen in die Wolken und versucht Figuren zu finden.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "krativ",
+        "gruppe"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "hot-komini",
+      "title": "Heißes Getränk aus dem Regal",
+      "description": "Japanische Besonderheit: Kaufe ein heißen Tee in der Plastikflasche in einem Kombini deiner Wahl.",
+      "points": 1,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "drink",
+        "shopping"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kokeshi",
+      "title": "Find Kokeshi",
+      "description": "Kokeshi sind traditionelle Holzpuppen ohne Arme. Finde sie in einem Laden oder Museum.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "kultur",
+        "handwerk",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "japanese-show",
+      "title": "Japanese Game Show",
+      "description": "Wer kennt nicht Takeshi's Castle? Schaue eine Game Show im japanischen Fernsehen.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "tv",
+        "live"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "hide-in-bamboo",
+      "title": "Verschwinde im Bambus",
+      "description": "Verstecke dich in/hinter Bambus und lasse ein Foto von dir machen, wo du durch den Bambus-Wald nicht sichtbar bist.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "natur",
+        "foto"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "tastetest-new",
+      "title": "Taste-Test something new",
+      "description": "Probiere ein Essen wo du keine Ahnung hast was es ist und wie es schmeckt. Verwende vor dem Kauf einen Übersetzer um sicherzustellen dass es genießbar ist.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "mahlzeit",
+        "shopping",
+        "food"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "kino",
+      "title": "Gehe ins Kino",
+      "description": "Schaue dir einen Film in einem japanischen Kino an. Vielleicht sogar einen Film aus Japan in OVmU?",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "gruppe",
+        "kultur",
+        "kunst"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "japanes-name",
+      "title": "Dein Name auf Japanisch",
+      "description": "Schreibe deinen Namen auf Japanisch. Optional: Vergleicht in der Gruppe wer den schönsten Namen hat.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "schrift",
+        "stift",
+        "kunst",
+        "gruppe"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "landlocked-prefecture",
+      "title": "Besuche eine Landlocked Prefecture",
+      "description": "Japan ist umgeben von Wasser. Es gibt aber auch einiger Prefectures, die landlocked sind. Besuche eine davon auf deiner Reise.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "prefäktur",
+        "planung"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "möbelhaus",
+      "title": "Besuche ein Möbelhaus",
+      "description": "Japanische Haushalte haben teils wunderschöne Möbel. Besuche ein Möbelhaus und schaue dir an wie es sich zu europäischen unterscheidet. Alternativ: Besuche Ikea.",
+      "points": 4,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "shopping",
+        "architektur",
+        "einrichtung"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "find-monkey",
+      "title": "Finde einen Affen",
+      "description": "Finde und fotografiere einen Affen.",
+      "points": 2,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "tier",
+        "natur",
+        "foto"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "walk-randomely",
+      "title": "Laufe per Zufall",
+      "description": "Laufe mit einem Zufallsgenerator für mindestens 20 Minuten durch die Stadt. An jeder Kreuzung, ordne jeder Richtung eine Zahl zu und nutze einen Zufallsgenerator um zu entscheiden, wo du weiterläufst. Wo führt es dich hin?",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "spiel",
+        "stadt",
+        "entdecken"
+      ],
+      "status": "available",
+      "activatedAt": null,
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    },
+    {
+      "id": "very-local-restaurant",
+      "title": "Esse sehr Lokal",
+      "description": "Esse in einem Restaurant welches du als sehr lokal bezeichnen würdest. Also keine Touristen-Region, keine englischsprachige Karte, klein und gemütlich.",
+      "points": 3,
+      "regions": [
+        "anywhere"
+      ],
+      "tags": [
+        "regional",
+        "mahlzeit"
+      ],
+      "status": "active",
+      "activatedAt": "2026-10-24T10:00:00.000Z",
+      "completedAt": null,
+      "replacedAt": null,
+      "completion": null
+    }
+  ],
+  "activity": [
+    {
+      "id": "evt_seed_japanese-word",
+      "type": "activated",
+      "challengeId": "japanese-word",
+      "at": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_dammkarte",
+      "type": "activated",
+      "challengeId": "dammkarte",
+      "at": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_postcard-self",
+      "type": "activated",
+      "challengeId": "postcard-self",
+      "at": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_ery-local-restaurant",
+      "type": "activated",
+      "challengeId": "very-local-restaurant",
+      "at": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "evt_seed_100-waters",
+      "type": "activated",
+      "challengeId": "100-waters",
+      "at": "2026-10-24T10:00:00.000Z"
+    }
+  ]
+}

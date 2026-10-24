@@ -17,10 +17,11 @@ function Confetti() {
   return <div className="confetti-burst" aria-hidden="true">{Array.from({ length: 42 }, (_, i) => <i key={i} style={{ left: `${i * 37 % 100}%`, '--delay': `${i % 7 * 55}ms`, '--confetti-color': ['#b689ff','#ffcc69','#65dcc5','#ff8fa9'][i % 4] }}/>)}</div>;
 }
 function Score({ totals }) {
-  const percent = totals.allPoints ? Math.min(100, totals.completedPoints / totals.allPoints * 100) : 0;
+  const target = 100;
+  const percent = Math.max(0, Math.min(100, totals.completedPoints / target * 100));
   return <section className="score-panel" aria-label="Dein Punktestand">
     <Capsule points={totals.completedPoints}/>
-    <div className="score-content"><span className="score-label">Deine Punkte</span><div className="score-value">{totals.completedPoints}<span> / {totals.allPoints}</span></div><div className="score-track"><i style={{width: `${percent}%`}}/></div><small>{totals.completedCount} von {totals.totalCount} Quests erledigt</small></div>
+    <div className="score-content"><span className="score-label">Deine Punkte</span><div className="score-value">{totals.completedPoints}<span> / {target}</span>{' '}<span className="score-total" aria-label={`${totals.allPoints} Punkte insgesamt möglich`}>({totals.allPoints})</span></div><div className="score-track" role="progressbar" aria-label="Fortschritt zum 100-Punkte-Ziel" aria-valuemin={0} aria-valuemax={target} aria-valuenow={Math.min(target, Math.max(0, totals.completedPoints))} aria-valuetext={`${totals.completedPoints} von ${target} Zielpunkten`}><i style={{width: `${percent}%`}}/></div><small>{totals.completedCount} von {totals.totalCount} Quests erledigt</small></div>
   </section>;
 }
 function QuestCard({ quest, onComplete, onReplace, disabled, compact = false }) {
@@ -94,7 +95,7 @@ function CompletionModal({ action, onClose, onConfirm, saving, error }) {
       <button ref={closeButton} className="icon-button modal-close" onClick={onClose} disabled={saving} aria-label="Schließen"><Icon name="close"/></button>
       <div className="modal-top"><Capsule points={action.quest.points}/><span>{completing ? 'Eine Geschichte mehr' : 'Neue Karte, neues Glück'}</span></div>
       <h2 id="action-title">{completing ? 'Quest geschafft?' : 'Diese Quest tauschen?'}</h2><h3>{action.quest.title}</h3>
-      <p>{completing ? `Du sammelst ${action.quest.points} Punkte. Für deine Karte kannst du den Ort dieses Moments speichern.` : 'Diese Karte verlässt deine Vorschläge. Wenn der Stapel noch Karten enthält, kommt eine neue dazu. Über die Suche kannst du diese Quest später wiederfinden.'}</p>
+      <p>{completing ? `Du sammelst ${action.quest.points} Punkte. Für deine Karte kannst du den Ort dieses Moments speichern.` : 'Diese Karte geht zurück in den Stapel. Eine andere offene Quest wird zufällig gezogen. Sind alle übrigen Quests schon vorgeschlagen, bleibt deine Karte erhalten.'}</p>
       {completing && <div className="location-choice"><button className="button secondary" onClick={locate} disabled={saving || geoStatus === 'loading'}><Icon name="location" size={18}/>{geoStatus === 'ready' ? 'Standort aktualisieren' : geoStatus === 'loading' ? 'Suche läuft ...' : 'Standort hinzufügen'}</button><small role="status">{geoMessage || 'Kein Tracking. Nur ein Standort pro erledigter Quest.'}</small></div>}
       {error && <p className="inline-error" role="alert">{error}</p>}
       <div className="modal-actions"><button className="button secondary" disabled={saving} onClick={onClose}>Zurück</button><button className="button primary" disabled={saving} onClick={() => onConfirm(location)}>{saving ? 'Speichern ...' : !completing ? 'Neue Karte ziehen' : location ? 'Erledigt bestätigen' : 'Ohne GPS abschließen'}</button></div>
@@ -112,7 +113,7 @@ function Explanation() {
     <article><span className="step-number">02</span><h2>Erledigen oder tauschen</h2><p>Geschafft? Bestätige die Quest und sammle Punkte. Danach füllt eine neue Karte deinen freien Platz. Passt etwas nicht, darfst du es tauschen.</p></article>
     <article><span className="step-number">03</span><h2>Der Moment entscheidet</h2><p>Schon am richtigen Ort für etwas anderes? Such im Katalog und erledige eine passende Quest direkt. Deine Vorschläge ändern sich dabei nicht, außer du erledigst eine dieser fünf Karten.</p></article>
     <article><span className="step-number">04</span><h2>Erinnerungen sammeln</h2><p>Speichere beim Abschluss freiwillig deinen Standort für die Karte. Die Einwegkamera ist für besondere Fotos, nicht als Pflichtbeweis. Achte auf Regeln vor Ort und frag Menschen vor dem Fotografieren.</p></article>
-  </div><p className="explanation-note">Jede Quest zählt einmal. Getauschte Karten bleiben über die Suche erreichbar. Ist der Stapel leer, gibt es weniger als fünf Vorschläge. Deine Reise geht trotzdem weiter.</p></section>;
+  </div><p className="explanation-note">Jede Quest zählt einmal. Getauschte Karten gehen zurück in den Stapel und können später wieder zufällig gezogen werden. Du kannst sie auch über die Suche erledigen. Weniger als fünf Vorschläge gibt es erst, wenn insgesamt weniger als fünf offene Quests übrig sind.</p></section>;
 }
 
 function AdminView({ data }) {
@@ -158,7 +159,7 @@ export default function QuestApp({ token, role }) {
     {data && <><header className="hero"><div className="hero-copy"><p className="eyebrow">{role === 'admin' ? 'Dein Kontrollraum' : `${data.meta.playerName}s Reiseabenteuer`}</p><h1 className="display-font">{titleCase(data.meta.title)}</h1><span className="hero-japanese" lang="ja">旅のクエスト</span></div><Score totals={data.totals}/></header>
       {role === 'admin' ? <AdminView data={data}/> : <><nav className="tabs" aria-label="Ansichten">{[['quests','card','Quests'],['map','map','Karte'],['explanation','help','Erklärung']].map(([id,icon,label]) => <button key={id} className={tab === id ? 'active' : ''} aria-current={tab === id ? 'page' : undefined} onClick={() => setTab(id)}><Icon name={icon} size={20}/>{label}</button>)}</nav>
         {tab === 'quests' && <main><div className="hand-heading"><div><h2>Für dich gezogen</h2><p>Deine {data.active.length} aktuellen Vorschläge</p></div><span className="hand-count">{data.active.length} / 5</span></div>
-          {data.active.length < 5 && <p className="empty-note">{data.active.length ? 'Der Stapel ist fast leer. Deine übrigen Vorschläge bleiben hier.' : 'Alle Karten gezogen! Über die Suche kannst du noch offene, getauschte Quests erledigen.'}</p>}
+          {data.active.length < 5 && <p className="empty-note">{data.active.length ? 'Fast geschafft! Alle noch offenen Quests sind hier vorgeschlagen.' : 'Alle Quests geschafft! Deine Erinnerungen bleiben auf der Karte.'}</p>}
           <div className="quest-grid">{data.active.map(q => <QuestCard key={q.id} quest={q} onComplete={q => showAction('complete',q)} onReplace={q => showAction('replace',q)} disabled={saving}/>)}</div>
           <QuestSearch token={token} revision={revision} disabled={saving} onComplete={q => showAction('complete',q)}/>
         </main>}

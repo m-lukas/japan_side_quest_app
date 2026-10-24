@@ -48,7 +48,7 @@ test('complete a search-only quest without changing promoted IDs or timestamps',
 });
 test('replaced quests remain searchable and may be completed directly', () => {
   const s=fresh(), q=game.promoted(s)[0]; game.replace(s,q.id); const before=ids(s);
-  assert.equal(q.status,'replaced'); assert.equal(ids(s).length,5);
+  assert.equal(q.status,'available'); assert.equal(ids(s).length,5);
   assert.ok(schema.searchChallenges(s,q.title).results.some(c => c.id===q.id));
   game.complete(s,q.id,null); assert.deepEqual(ids(s),before);
 });
@@ -63,9 +63,67 @@ test('search hides completed, handles empty text, and matches descriptions and t
   assert.ok(!schema.searchChallenges(s,'camera').results.some(c => c.id===q.id));
   assert.ok(schema.searchChallenges(s,'RAMEN').total>0);
 });
-test('empty pool never invents cards or re-promotes discarded ones', () => {
-  const s=fresh(); s.challenges=s.challenges.filter(c => c.status==='active');
-  game.complete(s,ids(s)[0],null); assert.equal(ids(s).length,4); game.replace(s,ids(s)[0]); assert.equal(ids(s).length,3);
+test('hundreds of swaps recycle cards and always keep five distinct unfinished quests', () => {
+  const s=fresh(), seen=new Set(ids(s));
+  const unfinished=s.challenges.length;
+  for(let i=0;i<300;i++) {
+    const before=ids(s), id=before[i % before.length];
+    game.replace(s,id);
+    const after=ids(s);
+    assert.equal(after.length,5); assert.equal(new Set(after).size,5);
+    assert.ok(!after.includes(id), 'a different available card must be drawn');
+    before.filter(other=>other!==id).forEach(other=>assert.ok(after.includes(other)));
+    assert.equal(s.challenges.filter(c=>c.status!=='completed').length,unfinished);
+    assert.equal(s.challenges.filter(c=>c.status==='replaced').length,0);
+    after.forEach(other=>seen.add(other));
+    assert.equal(game.refillActive(s),0); assert.deepEqual(ids(s),after);
+  }
+});
+test('a single spare card cycles back instead of being permanently discarded', () => {
+  const s=fresh();
+  s.challenges=[...game.promoted(s),s.challenges.find(c=>c.status==='available')];
+  const first=ids(s)[0], spare=s.challenges.find(c=>c.status==='available').id;
+  game.replace(s,first); assert.ok(ids(s).includes(spare));
+  assert.equal(s.challenges.find(c=>c.id===first).status,'available');
+  game.replace(s,spare); assert.ok(ids(s).includes(first)); assert.equal(ids(s).length,5);
+});
+test('legacy discarded cards rejoin the pool and refill depleted hands', () => {
+  const s=fresh(), original=ids(s).slice(0,2);
+  for(const c of s.challenges) if(!original.includes(c.id)) c.status='replaced';
+  assert.equal(game.needsPromotion(s),true);
+  assert.equal(game.refillActive(s),3);
+  assert.equal(ids(s).length,5); original.forEach(id=>assert.ok(ids(s).includes(id)));
+  assert.equal(s.challenges.filter(c=>c.status==='replaced').length,0);
+  assert.equal(game.needsPromotion(s),false);
+});
+test('legacy discarded cards are recovered even when the hand already has five', () => {
+  const s=fresh(), before=ids(s);
+  s.challenges.find(c=>c.status==='available').status='replaced';
+  assert.equal(game.needsPromotion(s),true);
+  assert.equal(game.refillActive(s),0); assert.deepEqual(ids(s),before);
+  assert.equal(game.needsPromotion(s),false);
+});
+test('with no spare unfinished card, swapping leaves the hand and score unchanged', () => {
+  const s=fresh(); s.challenges=s.challenges.filter(c=>c.status==='active');
+  const before=ids(s), activity=s.activity.length;
+  game.replace(s,before[0]); assert.deepEqual(ids(s),before); assert.equal(s.activity.length,activity);
+  game.complete(s,before[0],null); assert.equal(ids(s).length,4);
+  const remaining=ids(s);
+  game.replace(s,remaining[0]); assert.deepEqual(ids(s),remaining);
+  assert.equal(schema.publicDanielState(s).totals.completedCount,1);
+});
+test('only successful completions can reduce the hand below five', () => {
+  const s=fresh();
+  while(ids(s).length) {
+    game.complete(s,ids(s)[0],null);
+    const unfinished=s.challenges.filter(c=>c.status!=='completed').length;
+    assert.equal(ids(s).length,Math.min(5,unfinished));
+    if(ids(s).length) {
+      const count=ids(s).length;
+      game.replace(s,ids(s)[0]); assert.equal(ids(s).length,count);
+    }
+  }
+  assert.equal(s.challenges.filter(c=>c.status!=='completed').length,0);
 });
 test('no GPS is permitted and zero-valued coordinates remain located', () => {
   const s=fresh(); game.complete(s,ids(s)[0],{latitude:0,longitude:0,accuracyMeters:0});
@@ -93,5 +151,24 @@ test('Gist migration persists and subsequent visits read the same five', async (
     const available=stored.challenges.find(c => c.status==='available');
     const changed=await gist.updateGameState(s => game.complete(s,available.id,null));
     assert.deepEqual(ids(changed.state),ids(second));
+  } finally { globalThis.fetch=originalFetch; }
+});
+
+test('Gist automatically persists recycled legacy cards without resetting completions', async () => {
+  const originalFetch=globalThis.fetch;
+  process.env.GITHUB_GIST_ID='test'; process.env.GITHUB_TOKEN='test-secret'; process.env.GIST_FILENAME='japan-side-quest.json';
+  let stored=fresh(), writes=0;
+  game.complete(stored,ids(stored)[0],{latitude:35,longitude:139});
+  const completed=structuredClone(stored.challenges.find(c=>c.status==='completed'));
+  for(const c of stored.challenges) if(c.status!=='completed') c.status='replaced';
+  globalThis.fetch=async (_url,options) => {
+    if(options.method==='PATCH') { stored=JSON.parse(JSON.parse(options.body).files['japan-side-quest.json'].content); writes++; return new Response('{}'); }
+    return new Response(JSON.stringify({files:{'japan-side-quest.json':{content:JSON.stringify(stored)}}}));
+  };
+  try {
+    const first=await gist.readyGameState(), second=await gist.readyGameState();
+    assert.equal(writes,1); assert.equal(ids(first).length,5); assert.deepEqual(ids(first),ids(second));
+    assert.equal(stored.challenges.filter(c=>c.status==='replaced').length,0);
+    assert.deepEqual(stored.challenges.find(c=>c.id===completed.id),completed);
   } finally { globalThis.fetch=originalFetch; }
 });
